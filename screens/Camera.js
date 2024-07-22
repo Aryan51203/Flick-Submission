@@ -32,7 +32,6 @@ function CameraScreen({ navigation }) {
   async function handleTakePicturePress() {
     setCurrentMode("posting");
     const photo = await camera.current?.takePhoto({ flash: flash ? "on" : "off" });
-    console.log("Photo taken", photo);
     setPhotosArr([...photosArr, photo]);
     setCurrentMode("Camera");
   }

@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import PhotoCards from "../components/PhotoCards";
+import { Pressable, StyleSheet, Text, View } from "react-native";
+import PhotoDisplay from "../components/PhotoDisplay";
 
 function FeedScreen({ navigation, route }) {
   const photosArr = route.params.photosArr;
@@ -9,7 +9,7 @@ function FeedScreen({ navigation, route }) {
       <StatusBar style="auto" />
       <Text style={[styles.text, styles.heading]}>Feed</Text>
 
-      <PhotoCards photosArr={photosArr} />
+      <PhotoDisplay photosArr={photosArr} />
 
       <Pressable style={styles.modeBtn} onPress={() => navigation.goBack()}>
         <Text style={styles.text}>{"Camera"}</Text>
